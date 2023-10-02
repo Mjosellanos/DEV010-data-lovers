@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-
+<!-- esto lo que haria es especificar la codificacion de los caracteres de cada documento  -->
 <head>
   <meta charset="utf-8">
   <title>Data Lovers</title>
@@ -9,7 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
 </head>
-
+<!-- estos codigos muestran una pagina web donde tiene el encabezado
+   y todo el menu de navegacion, menu desplegable donde se muestran
+  unas opciones para seleccionar personajes, especies, generos, estado.-->
 <body>
   <header>
     <h1>The portal of the characters of Rick and Morty</h1>
@@ -25,72 +27,58 @@
         <option value="beth">Beth</option>
         <option value="jerry">Jerry</option>
       </optgroup>
-      <optgroup label="GENERO">
-        <option value="femenino">Femenino</option>
-        <option value="masculino">Masculino</option>
-        <option value="otro_genero">Otros</option>
-      </optgroup>
-      <optgroup label="ESPECIE">
-        <option value="humano">Humano</option>
-        <option value="alien">Alien</option>
-        <option value="otra_especie">Otros</option>
-      </optgroup>
-      <optgroup label="ESTADO">
-        <option value="vivo">Vivo</option>
-        <option value="muerto">Muerto</option>
-      </optgroup>
     </select>
 
     <br>
 
-    <label for="temporadas">Seasons:</label>
+    <label for="temporadas">Species:</label>
     <select id="temporadas" required>
       <option disabled selected value="">Select an option</option>
-      <option value="tem1">Tem 1</option>
-      <option value="tem2">Tem 2</option>
-      <option value="tem3">Tem 3</option>
-      <option value="tem4">Tem 4</option>
-      <option value="tem5">Tem 5</option>
-      <option value="tem6">Tem 6</option>
+      <optgroup label="ESPECIE">
+        <option value="Human">Humano</option>
+        <option value="Alien">Alien</option>
+      </optgroup>
     </select>
 
     <br>
 
-    <label for="ubicacion">Location:</label>
+    <label for="ubicacion">Gender:</label>
     <select id="ubicacion" required>
       <option disabled selected value="">Select an option</option>
-      <option value="tierra">Tierra</option>
-      <option value="otro_planeta">Otro planeta</option>
+      <optgroup label="GENERO">
+        <option value="Female">Femenino</option>
+        <option value="Male">Masculino</option>
+      </optgroup>
     </select>
+      <br>
 
-    <br>
+      <label for="otros">Status:</label>
+      <select id="otros" required>
+        <option disabled selected value="">Select an option</option>
+        <optgroup label="ESTADO">
+          <option value="Alive">Vivo</option>
+          <option value="unknown">Muerto</option>
+        </optgroup>
+      </select>
 
-    <label for="otros">Other:</label>
-    <select id="otros" required>
-      <option disabled selected value="">Select an option</option>
-      <option value="consejo_ricks">Concejo de los Ricks</option>
-      <option value="dimension_c137">Dimension C-137</option>
-    </select>
+      <label for="Ordenar">Order</label> 
+      <button id="Ordenar">Order</button>
   </nav>
 
   <!-- efecto de carta -->
-   <h2 id="cartasrm"></h2> 
+  <!-- el h2, es un titulo o un encabezado y el ID se utiliza para permiti identificar
+  y manipular ese titulo en JS-->
+  <h2 id="cartasrm"></h2>
+
+  <!-- el div lo utilizamos para crear elementos dentro de una pagina web,
+    y la clase container se utiliza para organizar, es decir que permite darle estilos o 
+    manipular contenidos con CSS y JS
+  -->
   <div class="container">
-    <!--  <div class="card">
-      <div class="imgBox">
-        <figure>
-          <img src="https://raw.githubusercontent.com/Laboratoria/rick-and-morty-images/master/images/1.jpeg"
-            alt="personaje de rick and morty">
-        </figure>
-      </div>
-      <div class="content">
-        <h2 id="cartasrm"></h2>
-        <P> informacion del personaje</P>
-      </div>
-    </div>  -->
+    
   </div>
   <footer>
-    <h3>Autoras: Wara Karen, Maria Jose </h3>
+    <h3> Maria Jose Llanos </h3>
   </footer>
   <div id="root"></div>
   <script src="main.js" type="module"></script>
